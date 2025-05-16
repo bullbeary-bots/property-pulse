@@ -1,5 +1,6 @@
 "use client";
 
+import Spinner from "@/components/Spinner";
 import React from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -9,15 +10,7 @@ const override = {
 };
 
 const LoadingPage = ({ loading }) => {
-  return (
-    <ClipLoader
-      color="#3b82f6"
-      loading={loading}
-      cssOverride={override}
-      size={150}
-      aria-label="Loading Spinner"
-    />
-  );
+  return <Spinner loading={loading} />;
 };
 
 export default LoadingPage;
